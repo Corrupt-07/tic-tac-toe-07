@@ -3,6 +3,7 @@ frontPage.html
 frontPage.css
 public/
 firebase.json
+.firebaserc
 
 # Logs
 logs
