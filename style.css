@@ -1,0 +1,617 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #273c75;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+}
+
+.titleApp {
+  padding: 5px;
+  margin: 20px;
+  /* background-color: red; */
+  width: 4.2%;
+  /* border: 2px solid black; */
+  border-style: dotted;
+  color: #fff;
+}
+
+.blueText {
+  color: #0984e3;
+}
+
+.redText {
+  color: #e17055;
+}
+
+.body-of-game {
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  /* padding: 2rem; */
+  /* width: 50%; */
+  justify-content: center;
+  /* align-items: center; */
+  margin-left: 200px;
+  margin-right: 200px;
+  /* height: 600px; */
+}
+
+.body-of-table {
+  height: 500px;
+  /* background-color: pink; */
+}
+
+tr,
+td {
+  width: 200px;
+}
+
+td {
+  height: 170px;
+}
+
+button {
+  /* padding: 0.5rem; */
+  width: 100%;
+  height: 100%;
+  background-color: #192a56;
+  border-right: 1px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  /* border-style: dotted; */
+}
+
+td {
+  border-style: dotted;
+}
+
+.One {
+  border-radius: 25px 0 0 0;
+  /* border-style: dotted; */
+  color: #fff;
+  overflow: hidden;
+}
+
+.Two,
+.Three {
+  border-left: 0;
+  /* border-style: dotted; */
+  color: #fff;
+}
+.Three {
+  border-radius: 0 25px 0 0;
+  overflow: hidden;
+}
+
+.Four {
+  border-top: 0;
+  /* border-style: dotted; */
+  color: #fff;
+}
+
+.Five,
+.Six {
+  border-top: 0;
+  border-left: 0;
+  /* border-style: dotted; */
+  color: #fff;
+}
+
+.Seven {
+  border-top: 0;
+  /* border-style: dotted; */
+  color: #fff;
+  border-radius: 0 0 0 25px;
+  overflow: hidden;
+}
+
+.Eight,
+.Nine {
+  border-top: 0;
+  border-left: 0;
+  /* border-style: dotted; */
+  color: #fff;
+}
+
+.Nine {
+  border-radius: 0 0 25px 0;
+  overflow: hidden;
+}
+
+img {
+  width: 165px;
+  height: 155px;
+  margin: 5px;
+}
+
+.userSelect,
+.computerSelect {
+  background-color: #192a56;
+  margin-top: 70px;
+  padding: 25px;
+  color: #fff;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.userSelect {
+  margin-left: 100px;
+}
+
+.title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.subTitle1,
+.subTitle2 {
+  font-size: 25px;
+  color: palevioletred;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.computerSelect {
+  margin-right: 100px;
+}
+
+.fa-user {
+  position: absolute;
+  /* top: 25%; */
+  /* left: auto;
+  right: auto; */
+  margin-top: 50px;
+  background-color: #fff;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+.user {
+  margin-left: 130px;
+}
+.computer {
+  margin-left: 33px;
+}
+
+.userWon,
+.computerWon {
+  /* flex: none; */
+  /* background-color: #e17055; */
+  width: 100px;
+  margin-top: 20px;
+  border-style: dotted;
+  color: #fff;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.userWon {
+  margin-left: 100px;
+  /* justify-content: end; */
+}
+
+p {
+  text-align: center;
+  color: #fff;
+}
+
+#userData,
+#computerData {
+  margin-top: 10px;
+}
+
+.headerContent {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 10px; */
+}
+
+.chooseUser {
+  /* background-color: red; */
+  width: 1300px;
+}
+
+.selectInput {
+  display: flex;
+  margin-left: 44%;
+  /* justify-content: space-evenly; */
+}
+
+input {
+  margin: 5px;
+  width: 70px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+#img0,
+#img1,
+#img2,
+#img3,
+#img4,
+#img5,
+#img6,
+#img7,
+#img8 {
+  display: none;
+}
+
+.printOutput {
+  position: absolute;
+  background-color: #5f1dcf;
+  height: 400px;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 10px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  display: none;
+}
+
+.resetBtn {
+  width: 200px;
+  border: none;
+  color: #fff;
+  background-color: tomato;
+  cursor: pointer;
+}
+
+.playerSelectedImg1 {
+  display: none;
+  height: 40px;
+  width: 40px;
+  margin-left: 100px;
+}
+
+.playerSelectedImg2 {
+  display: none;
+  height: 40px;
+  width: 40px;
+  margin-right: 130px;
+}
+
+.turnOfLeft {
+  display: none;
+  margin-left: 100px;
+  margin-top: 20px;
+  /* height: 200px; */
+  /* width: 120px; */
+  /* background-color: red; */
+  /* font-size: 20px; */
+}
+
+.fa-angle-double-right {
+  color: #fff;
+}
+
+.turnOfRight {
+  display: none;
+  margin-right: 100px;
+  margin-top: 20px;
+  /* height: 200px; */
+  /* width: 120px; */
+  /* background-color: red; */
+  /* font-size: 20px; */
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    /* background-color: red; */
+  }
+  .titleApp {
+    padding: 5px;
+    margin: 20px;
+    /* background-color: pink; */
+    width: 13.2%;
+    /* border: 2px solid black; */
+    border-style: dotted;
+    color: #fff;
+  }
+  .headerContent {
+    height: 100px;
+    font-size: 15px;
+  }
+  p {
+    display: flex;
+    /* font-size: 30px; */
+  }
+  .chooseTitle {
+    display: flex;
+    justify-content: center;
+  }
+  .body-of-game {
+    width: 500px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .body-of-table {
+    width: 430px;
+  }
+  .userSection,
+  .computerSection {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+  }
+  .userSelect {
+    /* display: flex;
+    justify-content: center; */
+    height: 100px;
+    width: 80px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .computerSelect {
+    /* margin: 5px; */
+    height: 100px;
+    width: 80px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .userWon {
+    margin-left: 10px;
+    width: 80px;
+  }
+  .title {
+    font-size: 10px;
+  }
+  #userData,
+  #computerData {
+    font-size: 10px;
+  }
+
+  .computerWon {
+    margin-right: 10px;
+    width: 80px;
+  }
+  #selectedItem,
+  .playerSelectedImg1 {
+    margin-left: 10px;
+  }
+  .playerSelectedImg2 {
+    margin-right: 10px;
+  }
+  .turnOfLeft {
+    margin-left: 10px;
+  }
+  .turnOfRight {
+    margin-right: 10px;
+  }
+  img {
+    width: 127px;
+    height: 133px;
+    margin: 2px;
+  }
+  tr,
+  td {
+    width: 140px;
+  }
+
+  td {
+    height: 140px;
+  }
+  button {
+    width: 165px;
+    height: 165px;
+  }
+  .user {
+    margin-left: 0;
+  }
+  .computer {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 905px) {
+  .titleApp {
+    width: 5.2%;
+  }
+  /* body{
+    background-color: red;
+  } */
+  button {
+    width: 195px;
+    height: 195px;
+  }
+  .body-of-table {
+    width: 650px;
+  }
+  .body-of-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  img {
+    width: 182px;
+    height: 183px;
+    margin: 2px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .titleApp {
+    width: 8.2%;
+  }
+  /* body{
+    background-color: red;
+  } */
+  button {
+    width: 135px;
+    height: 135px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .titleApp {
+    width: 8.2%;
+  }
+  /* body{
+    background-color: red;
+  } */
+  button {
+    width: 135px;
+    height: 135px;
+  }
+  .body-of-table {
+    width: 230px;
+  }
+  .body-of-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .titleApp {
+    width: 5.2%;
+  }
+  button {
+    width: 195px;
+    height: 175px;
+  }
+  .body-of-table {
+    width: 630px;
+  }
+  .body-of-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* body {background: red;} */
+  .titleApp {
+    width: 12.2%;
+    height: 50%;
+  }
+  .selectInput {
+    margin-left: 20%;
+  }
+  .userSection,
+  .computerSection {
+    width: 50px;
+  }
+  .userSection{
+    margin-left: 15px;
+  }
+  .userSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+    width: 50px;
+    margin-right: 0;
+  }
+  .computerSection{
+    margin-right: 15px;
+  }
+  .computerSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+    width: 50px;
+    /* margin-left: 100px; */
+  }
+  .computer{
+    /* margin-left: 100px; */
+  }
+  .title {
+    font-size: 5px;
+  }
+  .fa-user {
+    padding: 2px;
+    font-size: 7px;
+    margin-top: 65px;
+  }
+  .userWon {
+    width: 30px;
+    margin-left: 0;
+  }
+  .computerWon{
+    margin-right: 0;
+    /* margin-left: 100px; */
+    width: 30px;
+  }
+  p {
+    font-size: 10px;
+  }
+  #userData,#computerData{
+    font-size: 5px;
+  }
+  button {
+    width: 65px;
+    height: 135px;
+  }
+  .body-of-game{
+    width: 250px;
+    height: 250px;
+  }
+  .body-of-table{
+    width: 170px;
+    height: 180px;
+  }
+  tr,td{
+    width: 50px;
+    height: 50px;
+  }
+  button{
+    width: 50px;
+    height: 50px;
+  }
+   img {
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+  }
+  .turnOfLeft,
+  .turnOfRight{
+    margin-top: 0;
+  }
+  .fa-angle-double-right{
+    font-size: 5px;
+  }
+  .playerSelectedImg1,
+  .playerSelectedImg2{
+    height: 20px;
+    width: 20px;
+  }
+  input{
+    padding: 5px;
+    width: 50px;
+  }
+}

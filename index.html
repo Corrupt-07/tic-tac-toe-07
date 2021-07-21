@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tack Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="fullGame">
+
+
+    <div class="headerContent">
+        <div class="titleApp">
+            <p>
+                <span class="redText">T</span>
+                <span class="blueText">I</span>
+                <span class="redText">C</span>
+            </p>
+            <p>
+                <span class="blueText">T</span>
+                <span class="redText">A</span>
+                <span class="blueText">C</span>
+            </p>
+            <p>
+                <span class="redText">T</span>
+                <span class="blueText">O</span>
+                <span class="redText">E</span>
+            </p>
+        </div>
+        <div class="chooseUser">
+            <div class="chooseTitle">
+                <p style="margin-top: 10px;">Choose</p>
+            </div>
+            <div class="selectInput">
+                <input type="text" name="" value="x" class="x" readonly>
+                <input type="text" name="" value="o" class="x" readonly>
+            </div>
+            
+        </div>
+    </div>
+   
+
+
+    <div class="main">
+        <div class="userSection">
+            <i class="fa fa-user user" aria-hidden="true"></i>
+            <div class="userSelect">
+             
+                <p class="title">Player1</p>
+                <p class="subTitle1"></p>
+            </div>
+            <div class="userWon">
+                <p id="userData">Wins:</p>
+            </div>
+           
+            <div class="playerSelected">
+                <p id="selectedItem"><img class="playerSelectedImg1" src=""></p>
+            </div>
+            <div class="turnOfLeft">
+                <i class="fas fa-angle-double-right">Your Turn</i>
+            </div>
+        </div>
+       
+        <table class="body-of-game">
+            <tbody class="body-of-table">
+            <tr>
+                <td class="One"><button class="0"><img class="One" id="img0" src="tic1.jpg"></button></td>
+                <td class="Two"><button class="1"><img class="Two" id="img1" src="tic1.jpg"></button></td>
+                <td class="Three"><button class="2"><img class="Three" id="img2" src="tic1.jpg"></button></td>
+            </tr>
+            <tr>
+                <td class="Four"><button class="3"><img class="Four" id="img3" src="tic1.jpg"></button></td>
+                <td class="Five"><button class="4"><img class="Five" id="img4" src="tic1.jpg"></button></td>
+                <td class="Six"><button class="5"><img class="Six" id="img5" src="tic1.jpg"></button></td>
+            </tr>
+            <tr>
+                <td class="Seven"><button class="6"><img class="Seven" id="img6" src="tic1.jpg"></button></td>
+                <td class="Eight"><button class="7"><img class="Eight" id="img7" src="tic1.jpg"></button></td>
+                <td class="Nine"><button class="8"><img class="Nine" id="img8" src="tic1.jpg"></button></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="computerSection">
+            <i class="fa fa-user computer" aria-hidden="true"></i>
+            <div class="computerSelect">
+                
+                <p class="title">Player2</p>
+                <p class="subTitle2"></p>
+            
+            </div>
+            <div class="computerWon">
+                <p id="computerData">Wins: </p>
+            </div>
+            
+         
+            <div class="playerSelected">
+                <p id="selectedItem"><img class="playerSelectedImg2" src=""></p>
+            </div>
+            <div class="turnOfRight">
+                <i class="fas fa-angle-double-right">Your Turn</i>
+            </div>
+        </div>
+    
+    </div>
+        </div>
+    <div class="printOutput">
+        <div class="titleOfmessage">
+            <h1 id="error_message">Player 1 is won which has X</h1>
+        </div>
+        <div class="resetSection">
+            <input type="submit" class="resetBtn" value="Start Again">
+        </div>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
