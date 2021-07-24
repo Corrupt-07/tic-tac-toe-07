@@ -112,6 +112,7 @@ for (var i = 0; i < btns.length; i++) {
                 // if user clicked on x then on that button inside that there is one img section on that image will active of x.jpg and class is added of x and count is set to 1 and based on this whoz turn will b next is aslo set
                 // console.log(this.classList);
                 document.getElementById(`img` + this.classList[0]).src = 'tic1.jpg';
+                this.classList.remove('okay');
                 this.classList.add('x');
                 choosen = 'x';
                 count = 1;
@@ -124,6 +125,7 @@ for (var i = 0; i < btns.length; i++) {
                 document.querySelector('.turnOfLeft').style.display = 'block';
                 document.getElementById(`img` + this.classList[0]).src = 'tic3.jpg';
                 choosenUser = 'x';
+                this.classList.remove('okay');
                 this.classList.add('o');
                 choosen = 'o';
                 count = 0;
@@ -137,67 +139,86 @@ for (var i = 0; i < btns.length; i++) {
 
             // this loop is to check when BINGO is done so we are seting this to btns length as we want to check only all btns value
             for (let index = 0; index < btns.length; index++) {
+                console.log(btns[index].classList[1]);
                 // this is to check the first row
                 // i.e index = 0 choosen is x if btn[0] value is x and choosen is x then it will match
                 // this is to check only columns
                 // why i need to use first if then check format coz if suppose index is 1 then btn[1]=x and btn[2]=x and btn[3] = x hence this is not correct format of winner so i need to go in new if part to check correct format
                 // same logic continue till all rows and columns have not been match
-                if (btns[index].classList[1] === choosen && btns[index + 1].classList[1] === choosen && btns[index + 2].classList[1] === choosen) {
-                    console.log(index);
-                    // if the value is set as per winner format then that is correct pattern and it should show BINGO
-                    if (index === winnerFormat[0][0] && index + 1 === winnerFormat[0][1] && index + 2 === winnerFormat[0][2]) {
-                        console.log("BINGO");
-                        flag = 1;
-                        bingo(choosen);
-                    }
-                    else if (index === winnerFormat[1][0] && index + 1 === winnerFormat[1][1] && index + 2 === winnerFormat[1][2]) {
-                        console.log("BINGO");
-                        flag = 1;
-                        bingo();
-                    } else if (index === winnerFormat[2][0] && index + 1 === winnerFormat[2][1] && index + 2 === winnerFormat[2][2]) {
-                        console.log("BINGO");
-                        flag = 1;
-                        bingo();
-                    }
-                }
-
-                if (btns[index].classList[1] === choosen && btns[index + 3].classList[1] === choosen && btns[index + 6].classList[1] === choosen) {
-                    if (index === winnerFormat[3][0] && index + 3 === winnerFormat[3][1] && index + 6 === winnerFormat[3][2]) {
-                        console.log("BINGO");
-                        flag = 1;
-                        bingo();
-                    }
-                    else if (index === winnerFormat[4][0] && index + 3 === winnerFormat[4][1] && index + 6 === winnerFormat[4][2]) {
-                        console.log("BINGO");
-                        flag = 1;
-                        bingo();
-                    } else if (index === winnerFormat[5][0] && index + 3 === winnerFormat[5][1] && index + 6 === winnerFormat[5][2]) {
-                        console.log("BINGO");
-                        flag = 1;
-                        bingo();
-                    }
-                }
-
+                // console.log(choosen);
                 // console.log(index);
-                if (btns[index].classList[1] === choosen && btns[index + 4].classList[1] === choosen && btns[index + 8].classList[1] === choosen) {
-                    if (index === winnerFormat[6][0] && index + 4 === winnerFormat[6][1] && index + 8 === winnerFormat[6][2]) {
-                        console.log("BINGO");
-                        flag = 1;
-                        bingo();
-                    }
+                // if else condition i have used because if index is 9 then btn will be index + 3 i.e 9+3 is 12 which is not btn and throw error
+                if (index <= 6) {
+                    if (btns[index].classList[1] === choosen && btns[index + 1].classList[1] === choosen && btns[index + 2].classList[1] === choosen) {
+                        // console.log(index);
+                        // if the value is set as per winner format then that is correct pattern and it should show BINGO
+                        if (index === winnerFormat[0][0] && index + 1 === winnerFormat[0][1] && index + 2 === winnerFormat[0][2]) {
+                            console.log("BINGO");
+                            flag = 1;
+                            bingo(choosen);
+                        }
 
+                        else if (index === winnerFormat[1][0] && index + 1 === winnerFormat[1][1] && index + 2 === winnerFormat[1][2]) {
+                            console.log("BINGO");
+                            flag = 1;
+                            bingo();
+                        }
+
+                        else if (index === winnerFormat[2][0] && index + 1 === winnerFormat[2][1] && index + 2 === winnerFormat[2][2]) {
+                            console.log("BINGO");
+                            flag = 1;
+                            bingo();
+                        }
+                        console.log(index);
+                    }
+                
                 }
-                // console.log(btns[index+2].classList[1]);
-                if (btns[index + 2].classList[1] === choosen && btns[index + 4].classList[1] === choosen && btns[index + 6].classList[1] === choosen) {
-                    if (index + 2 === winnerFormat[7][0] && index + 4 === winnerFormat[7][1] && index + 6 === winnerFormat[7][2]) {
-                        console.log("BINGO");
-                        flag = 1;
-                        bingo();
+              
+                if (index < 3) {
+                    if (btns[index].classList[1] === choosen && btns[index + 3].classList[1] === choosen && btns[index + 6].classList[1] === choosen) {
+                        if (index === winnerFormat[3][0] && index + 3 === winnerFormat[3][1] && index + 6 === winnerFormat[3][2]) {
+                            console.log("BINGO");
+                            flag = 1;
+                            bingo();
+                        }
+                        else if (index === winnerFormat[4][0] && index + 3 === winnerFormat[4][1] && index + 6 === winnerFormat[4][2]) {
+                            console.log("BINGO");
+                            flag = 1;
+                            bingo();
+                        } else if (index === winnerFormat[5][0] && index + 3 === winnerFormat[5][1] && index + 6 === winnerFormat[5][2]) {
+                            console.log("BINGO");
+                            flag = 1;
+                            bingo();
+                        }
                     }
                 }
+               
+                // console.log(index);
+                if (index < 1) {
+                    if (btns[index].classList[1] === choosen && btns[index + 4].classList[1] === choosen && btns[index + 8].classList[1] === choosen) {
+                        if (index === winnerFormat[6][0] && index + 4 === winnerFormat[6][1] && index + 8 === winnerFormat[6][2]) {
+                            console.log("BINGO");
+                            flag = 1;
+                            bingo();
+                        }
+                    }
+                }
+            if (index < 1) {
+                    // console.log("okay done");
+                    if (btns[index + 2].classList[1] === choosen && btns[index + 4].classList[1] === choosen && btns[index + 6].classList[1] === choosen) {
+                        if (index + 2 === winnerFormat[7][0] && index + 4 === winnerFormat[7][1] && index + 6 === winnerFormat[7][2]) {
+                            console.log("BINGO");
+                            flag = 1;
+                            bingo();
+                        }
+                    }
+            }
+               
+                // console.log(btns[index+2].classList[1]);
+
 
                 // if checkdraw is == 9 that means every btn is filled with some x or o so check if not BINGO then flag should b 0 hence it is draw
-                console.log(checkDraw);
+                // console.log(checkDraw);
                 if (checkDraw == 9 && flag == 0) {
                     error_message.innerText = 'Draw Bai!!!';
                     document.querySelector('.printOutput').style.display = 'flex';
@@ -219,7 +240,7 @@ function bingo(choosen) {
     if (userClickIcon == choosen) {
         console.log("player 1 wins");
         document.querySelector('#userData').innerText += ' X'
-    }else{
+    } else {
         console.log("player 2 wins");
         document.querySelector('#computerData').innerText += ' X'
     }
@@ -250,12 +271,12 @@ resetBtn.addEventListener('click', () => {
 })
 
 
-window.onload = function () {
-    let player_1 = prompt('Player 1 name');
-    let player_2 = prompt('Player 2 name');
+// window.onload = function () {
+//     let player_1 = prompt('Player 1 name');
+//     let player_2 = prompt('Player 2 name');
 
-    localStorage.setItem("player1", player_1);
-    localStorage.setItem("player2", player_2);
-    player1.innerHTML = localStorage.getItem("player1");
-    player2.innerHTML = localStorage.getItem("player2");
-};
+//     localStorage.setItem("player1", player_1);
+//     localStorage.setItem("player2", player_2);
+//     player1.innerHTML = localStorage.getItem("player1");
+//     player2.innerHTML = localStorage.getItem("player2");
+// };
