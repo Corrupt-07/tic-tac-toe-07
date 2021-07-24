@@ -161,13 +161,13 @@ for (var i = 0; i < btns.length; i++) {
                         else if (index === winnerFormat[1][0] && index + 1 === winnerFormat[1][1] && index + 2 === winnerFormat[1][2]) {
                             console.log("BINGO");
                             flag = 1;
-                            bingo();
+                            bingo(choosen);
                         }
 
                         else if (index === winnerFormat[2][0] && index + 1 === winnerFormat[2][1] && index + 2 === winnerFormat[2][2]) {
                             console.log("BINGO");
                             flag = 1;
-                            bingo();
+                            bingo(choosen);
                         }
                         console.log(index);
                     }
@@ -179,16 +179,16 @@ for (var i = 0; i < btns.length; i++) {
                         if (index === winnerFormat[3][0] && index + 3 === winnerFormat[3][1] && index + 6 === winnerFormat[3][2]) {
                             console.log("BINGO");
                             flag = 1;
-                            bingo();
+                            bingo(choosen);
                         }
                         else if (index === winnerFormat[4][0] && index + 3 === winnerFormat[4][1] && index + 6 === winnerFormat[4][2]) {
                             console.log("BINGO");
                             flag = 1;
-                            bingo();
+                            bingo(choosen);
                         } else if (index === winnerFormat[5][0] && index + 3 === winnerFormat[5][1] && index + 6 === winnerFormat[5][2]) {
                             console.log("BINGO");
                             flag = 1;
-                            bingo();
+                            bingo(choosen);
                         }
                     }
                 }
@@ -199,7 +199,7 @@ for (var i = 0; i < btns.length; i++) {
                         if (index === winnerFormat[6][0] && index + 4 === winnerFormat[6][1] && index + 8 === winnerFormat[6][2]) {
                             console.log("BINGO");
                             flag = 1;
-                            bingo();
+                            bingo(choosen);
                         }
                     }
                 }
@@ -209,7 +209,7 @@ for (var i = 0; i < btns.length; i++) {
                         if (index + 2 === winnerFormat[7][0] && index + 4 === winnerFormat[7][1] && index + 6 === winnerFormat[7][2]) {
                             console.log("BINGO");
                             flag = 1;
-                            bingo();
+                            bingo(choosen);
                         }
                     }
             }
